@@ -1,43 +1,29 @@
-const port = 4000;
-const express = require("express")
-const app = express();
-const mongoose = require("mongoose")
-const jwt = require("jsonwebtoken")
-const multer = require("multer")
-const path = require("path")
-const cors = require("cors")
+require('dotenv').config();
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
 
+const app = express();
+const port = process.env.PORT || 4000;
+
+// Middleware
 app.use(express.json());
 app.use(cors());
 
+// Database Connection
+mongoose.connect(process.env.MONGO_URI)
+    .then(() => console.log("MongoDB connected"))
+    .catch(err => console.log(err));
 
-// DB Connect
+// Routes
+app.use('/', require('./routes/apiRoutes'));
+app.use('/upload', require('./routes/uploadRoutes'));
 
-mongoose.connect("mongodb+srv://username:password@cluster0.k3bnzoh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-
-// API
-
-app.get("/",(req,res)=>{
-    res.send("Express App is Running")
-})
-
-
-//Image Storage Engine
-
-const Storage = multer.diskStorage({
-    destination:'./upload/images',
-    filename: (req,file,cb)=>{
-        return cb(null,`${file.fieldname}`)
-
-        
+// Start Server
+app.listen(port, (err) => {
+    if (!err) {
+        console.log("Server Running on Port " + port);
+    } else {
+        console.log("Error: " + err);
     }
-})
-
-app.listen(port,(err)=>{
-    if(!err){
-        console.log("Server Running on Port "+port);
-    }
-    else{
-        console.log("Error: "+err);
-    }
-})
+});
