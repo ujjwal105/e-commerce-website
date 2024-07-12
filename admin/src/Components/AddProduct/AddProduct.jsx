@@ -43,6 +43,7 @@ export const AddProduct = () => {
     }
   }
   
+  
 
   const imageHandler = (e)=>{
     setimage(e.target.files[0])
