@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(cors());
 
 // DB Connect
-mongoose.connect("mongodb+srv://DB_USERNAME:DB_PASSWORD@cluster0.k3bnzoh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+mongoose.connect("mongodb+srv://ujjwaltyagi2969:bwkDdZF73PsTn9XO@cluster0.k3bnzoh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
 
 // API
 app.get("/", (req, res) => {
