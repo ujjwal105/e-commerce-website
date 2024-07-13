@@ -53,45 +53,6 @@ To get a local copy up and running, follow these steps:
 1. Clone the repository:
    ```sh
    git clone https://github.com/ujjwal105/e-commerce-website.git
-Install NPM packages for frontend, backend, and admin:
-sh
-Copy code
-cd e-commerce-website/frontend
-npm install
-cd ../backend
-npm install
-cd ../admin
-npm install
-Running the Project
-Start the backend server:
-sh
-Copy code
-cd backend
-node index.js
-Start the frontend:
-sh
-Copy code
-cd ../frontend
-npm start
-Start the admin panel:
-sh
-Copy code
-cd ../admin
-npm run dev
-Usage
-
-Frontend: Navigate to Frontend URL to access the user interface.
-Admin: Use the admin panel to manage products.
-Backend: Utilize the backend endpoints to handle various operations (e.g., adding products, user authentication).
-
-
-### Roadmap
-
- Implement payment gateway integration.
- Add search functionality for products.
- Enhance user profile management.
- Improve UI/UX design.
-
 
 ### Contributing
 
