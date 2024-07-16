@@ -1,41 +1,39 @@
-# GRABIT
+# GRABIT E-commerce Site
 
-Welcome to the GRABIT e-commerce site! This E-commerce site is a full-featured online store that provides a seamless shopping experience for users while offering robust management features for administrators.
+Welcome to the **GRABIT** e-commerce site! GRABIT is a full-featured online store that delivers a seamless shopping experience for users and robust management features for administrators.
 
 ## About The Project
 
-GRABIT is designed to offer a comprehensive shopping experience. Users can browse various product categories, add items to their cart, and proceed with a secure checkout. Administrators have dedicated functionalities to manage products and view inventory.
+GRABIT offers a comprehensive shopping experience. Users can browse product categories, add items to their cart, and proceed with secure checkout. Administrators have functionalities to manage products and view inventory.
 
-### Admin
+### Admin Features
 
-The admin panel includes a navigation bar with two categories:
-
-- **Add Product**: Allows administrators to add new products to the frontend using the backend.
+The admin panel includes:
+- **Add Product**: Allows administrators to add new products to the frontend via the backend.
 - **List Product**: Displays a list of all products currently in stock.
 
-Explore the admin functionality in more detail [here](https://e-commerce-website-admin-tau.vercel.app).
+### Backend Features
 
-### Backend
-
-The backend handles various functionalities including:
-
+The backend handles:
 - Image uploading using Multer
-- Product management with endpoints for adding, removing, and fetching products
+- Product management: Add, remove, and fetch products
 - User authentication with JWT
 - User registration and login
-- Cart management with endpoints for adding, removing, and fetching cart data
+- Cart management: Add, remove, and fetch cart data
 - Endpoints for creating new collections and popular products in the women's section
 
+### Frontend Features
 
-### Frontend
+The frontend includes:
+- Shop categories: Men, Women, and Kids
+- Cart page
+- Login/sign-up functionalities
 
-The frontend includes several shop categories (Men, Women, and Kids), a cart page, and login/sign-up functionalities. It leverages the backend to provide a dynamic and interactive user experience.
-
-Explore the frontend functionality in more detail [here](https://e-commerce-website-alpha-two.vercel.app).
+It leverages the backend to provide a dynamic and interactive user experience.
 
 ## Built With
 
-- **Frontend**: React, React Router DOM, CSS, 
+- **Frontend**: React, React Router DOM, CSS
 - **Backend**: Express, MongoDB, Mongoose, JWT, Multer
 - **Deployment**: Vercel
 
@@ -50,30 +48,104 @@ To get a local copy up and running, follow these steps:
 
 ### Installation
 
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/ujjwal105/e-commerce-website.git
+Follow these steps to set up the project locally:
 
-### Contributing
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/ujjwal105/e-commerce-website.git
+    ```
+2. **Navigate to the project directory**:
+    ```sh
+    cd e-commerce-website
+    ```
+3. **Install backend dependencies**:
+    ```sh
+    cd backend
+    npm install
+    ```
+4. **Set up environment variables**:
+    - Add the following variables:
+        ```
+        MONGO_URI=your_mongodb_connection_string
+        JWT_SECRET=your_jwt_secret
+        ```
+5. **Start the backend server**:
+    ```sh
+    node index.js
+    ```
+    The backend server will start on `http://localhost:4000`.
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+6. **Install frontend dependencies**:
+    ```sh
+    cd ../frontend
+    npm install
+    ```
+7. **Start the frontend server**:
+    ```sh
+    npm start
+    ```
+    The frontend server will start on `http://localhost:3000`.
 
-Fork the Project
-Create your Feature Branch (git checkout -b feature/AmazingFeature)
-Commit your Changes (git commit -m 'Add some AmazingFeature')
-Push to the Branch (git push origin feature/AmazingFeature)
-Open a Pull Request
+8. **Access the application**:
+    - Open your browser and navigate to `http://localhost:3000` to access the frontend.
+    - Use `http://localhost:5000/api` to interact with the backend APIs.
+
+## Usage
+
+Once the application is set up, you can start exploring its features:
+
+### User Side
+
+- **Browse Products**: Navigate through different categories (Men, Women, Kids) and view product details.
+- **Cart Management**: Add products to the cart, update quantities, and proceed to checkout.
+- **Authentication**: Register a new account or login to an existing one for a personalized shopping experience.
+
+### Admin Side
+
+- **Add Product**: Use the admin panel to add new products, including images and descriptions.
+- **Manage Inventory**: View and manage the list of products in stock.
+
+## Deployment
+
+GRABIT is deployed using Vercel. For deploying your own version, follow these steps:
+
+1. **Build the frontend**:
+    ```sh
+    cd frontend
+    npm build
+    ```
+2. **Deploy to Vercel**:
+    - Sign up for a Vercel account and link it to your GitHub repository.
+    - Push your changes to GitHub.
+    - Follow the instructions on Vercel to deploy your project.
+
+## Roadmap
+
+Future enhancements and planned features:
+
+- **Order History**: Allow users to view their past orders.
+- **Product Reviews**: Enable users to leave reviews and ratings for products.
+- **Advanced Search**: Implement a search functionality with filters and sorting options.
+- **Wishlist**: Allow users to save products to a wishlist for future purchase.
+
+## Acknowledgments
+
+Special thanks to the following resources and tools that made this project possible:
+
+- [React](https://reactjs.org/)
+- [Express](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Multer](https://github.com/expressjs/multer)
+- [JWT](https://jwt.io/)
+- [Vercel](https://vercel.com/)
 
 
-### License
+## License
 
-Distributed under the MIT License. See LICENSE for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
 
-### Contact 
+## Contact
 
 Ujjwal Tyagi - ujjwaltyagi2969@gmail.com
 
-Project Link: (https://e-commerce-website-alpha-two.vercel.app)
-
-
-This `README.md` file provides a comprehensive overview of the GRABIT e-commerce site, following the structure and guidelines you provided.
+Project Link: [GRABIT E-commerce Site](https://e-commerce-website-alpha-two.vercel.app)
